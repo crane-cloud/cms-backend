@@ -48,9 +48,13 @@ services:
       - wordpress
     build: .
     ports:
-      - "3030:3000"
+      - "3030:3030"
+    stdin_open: true
+    command: npm start
     volumes:
       - ".:/frontend"
+    networks:
+      - wpsite
 networks:
   wpsite:
 volumes:
