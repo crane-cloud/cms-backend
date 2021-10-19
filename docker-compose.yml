@@ -42,19 +42,6 @@ services:
       WORDPRESS_DB_PASSWORD: wordpress
     networks:
       - wpsite
-  # React
-  frontend:
-    depends_on:
-      - wordpress
-    build: .
-    ports:
-      - "3030:3030"
-    stdin_open: true
-    command: npm start
-    volumes:
-      - ".:/frontend"
-    networks:
-      - wpsite
 networks:
   wpsite:
 volumes:

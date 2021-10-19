@@ -1,7 +1,0 @@
-FROM node:alpine
-RUN mkdir -p /frontend
-COPY ./frontend /frontend
-WORKDIR /frontend
-RUN npm install
-EXPOSE 3030
-ENTRYPOINT [ "npm", "start" ]a
